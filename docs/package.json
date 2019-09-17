@@ -1,0 +1,30 @@
+{
+  "name": "GitbookAlgorithm",
+  "version": "1.0.0",
+  "description": "GitbookAlgorithm",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpslinuxinstall/GitbookAlgorithm.git"
+  },
+  "author": "Gitbook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpslinuxinstall/GitbookAlgorithm.git"
+  },
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^1.5.0"
+  },
+  "homepage": "https://github.com/vpslinuxinstall/GitbookAlgorithm.git",
+  "dependencies": {
+    "gitbook-plugin-toggle-chapters": "0.0.3",
+    "mathjax": "^3.0.0",
+    "mathjax-full": "^3.0.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "plugins": [
+        "expandable-chapters",
+        "splitter",
+        "prism",
+  		  "-highlight",
+        "back-to-top-button",
+        "page-toc-button",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "copy-code-button",
+        "alerts",
+        "lightbox",
+        "katex",
+        "mathjax-full"
+    ],
+    "pluginsConfig": {
+  "prism": {
+    "css": [
+      "prismjs/themes/prism-okaidia.css"
+    ],
+    "lang": {
+      "shell": "bash"
+    }
+  }
+}
+
+}
+
