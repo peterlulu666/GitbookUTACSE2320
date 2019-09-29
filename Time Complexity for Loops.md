@@ -32,7 +32,7 @@ A: BBBB
 ```
 
 The time complexity of this code would be
-\\[ \underbrace{N+⋯+N}_{M\text{ times}} = M \times N \\]
+$$\\[ \underbrace{N+⋯+N}_{M\text{ times}} = M \times N \\]$$
 
 
 ```c
