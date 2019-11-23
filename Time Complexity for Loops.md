@@ -32,8 +32,8 @@ A: BBBB
 ```
 
 The time complexity of this code would be
-$$\\[ \underbrace{N+⋯+N}_{M\text{ times}} = M \times N \\]$$
 
+<img src="\images\timecomplexity.gif" alt="timecomplexity" style="zoom:100%;" />
 
 ```c
 for (int i = 0; i < M; ++i) {
@@ -235,25 +235,88 @@ AN: B 1 ...... B 2^(p - 1)
 * The time complexity of this code is {% math %}\Theta (N log N){% endmath %}
 >
 
-5.The time complexity of this code would be
+## {% math %}\Theta (N log N){% endmath %}      
+
+The time complexity of this code would be
 $$
 \sum_{i=1}^{10} log_2 i
 $$
 
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    for (int i = 1; i <= 10; i++) {
+        printf("\ni: %d", i);
+        int count = 0;
+        printf("%20s", "j takes values: ");
+        for (int j = 1; j <= i; j *= 5) {
+            count++;
+            printf("%d ", j);
+        }
+        printf("%40s %d\n", "Iterations of for j for this i:", count);
+    }
+
+
+}      
+
+```
+
+The output would be
+
+```
+i: 1    j takes values: 1          Iterations of for j for this i: 1
+
+i: 2    j takes values: 1          Iterations of for j for this i: 1
+
+i: 3    j takes values: 1          Iterations of for j for this i: 1
+
+i: 4    j takes values: 1          Iterations of for j for this i: 1
+
+i: 5    j takes values: 1 5          Iterations of for j for this i: 2
+
+i: 6    j takes values: 1 5          Iterations of for j for this i: 2
+
+i: 7    j takes values: 1 5          Iterations of for j for this i: 2
+
+i: 8    j takes values: 1 5          Iterations of for j for this i: 2
+
+i: 9    j takes values: 1 5          Iterations of for j for this i: 2
+
+i: 10    j takes values: 1 5          Iterations of for j for this i: 2      
+
+```      
+
+The time complexity of this code would be
+$$
+\sum_{i=1}^{10} log_2 i
+$$     
 
 ```c
-for (int i = 1; i <= 10; i++) {
-        printf("\ni: %d      ", i);
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    for (int i = 1; i <= 10; i++) {
+        printf("\ni: %d", i);
         int count = 0;
-        printf("j takes values: ");
+        printf("%20s", "j takes values: ");
         for (int j = 1; j <= i; j *= 2) {
             count++;
             printf("%d ", j);
         }
-        printf("      Iterations of for j for this i: %d\n", count);
+        printf("%40s %d\n", "Iterations of for j for this i:", count);
     }
-```
+
+
+}      
+
+```      
+
+
+
 
 The output would be
 
@@ -281,20 +344,28 @@ i: 10      j takes values: 1 2 4 8       Iterations of for j for this i: 4
 
 The time complexity of this code would be
 $$
-\sum_{i=1}^{N} log_2 N
+\sum_{i=1}^{N} log_2 i
 $$
 
 ```c
-for (int i = 1; i <= N; i++) {
-        printf("\ni: %d      ", i);
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    for (int i = 1; i <= N; i++) {
+        printf("\ni: %d", i);
         int count = 0;
-        printf("j takes values:");
+        printf("%20s", "j takes values: ");
         for (int j = 1; j <= i; j *= 2) {
             count++;
             printf("%d ", j);
         }
-        printf("      Iterations of for j for this i: %d\n", count);
+        printf("%40s %d\n", "Iterations of for j for this i:", count);
     }
+
+
+}      
+
 ```
 
 The output would be
@@ -314,7 +385,7 @@ i: i      j takes values: 1 2 4 8 16 2^p      Iterations of for j for this i: lo
 
 i: N - 1  j takes values: 1 2 4 8 16 2^p      Iterations of for j for this i: log (N - 1)
 
-i: N      j takes values: 1 2 4 8 16 2^p      Iterations of for j for this i: log N
+i: N      j takes values: All the 2^p that smaller than N      Iterations of for j for this i: log N
 ```
 
 > **[info] Time complexity**
@@ -400,6 +471,17 @@ for (int i = 1; i <= p; i++) {
 >
 
 <img src="\images\performance.svg" alt="performance" style="zoom:100%;" />
+
+<br/>
+
+
+
+
+
+
+
+
+
 
 
 

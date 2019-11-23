@@ -198,6 +198,72 @@ do this until all the numbers are sorted.
 
 
 
+```c      
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(int *x, int *y) {
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+void selectionSort(int arr[], int n) {
+    for (int boundaryIndex = 0; boundaryIndex < n - 1; ++boundaryIndex) {
+        // find the minimum number of the unsorted array
+        int minIndex = boundaryIndex;
+        for (int unsortedIndex = boundaryIndex + 1; unsortedIndex < n; ++unsortedIndex) {
+            if (arr[unsortedIndex] < arr[minIndex]) {
+                // swap the index of found minimum number with the index of assumed minimum number
+                minIndex = unsortedIndex;
+            }
+
+        }
+
+        // swap the found minimum number with the boundary number
+        swap(&arr[minIndex], &arr[boundaryIndex]);
+
+//        int temp;
+//        temp = arr[minIndex];
+//        arr[minIndex] = arr[boundary];
+//        arr[boundary] = temp;
+
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter number of element \n");
+    scanf("%d", &n);
+    printf("Enter %d elements \n", n);
+    int arr[n];
+    for (int i = 0; i < n; ++i) {
+        printf("Enter number %d \n", i + 1);
+        scanf("%d", &arr[i]);
+
+    }
+
+//    int arr[] = {2, 7, 4, 1, 5, 3};
+//    int n = sizeof(arr) / sizeof(arr[0]);
+    selectionSort(arr, n);
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}      
+
+```      
+
+
+
+
+
+
+
+
+
 
 
 
